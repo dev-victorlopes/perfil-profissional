@@ -1,0 +1,195 @@
+/* Estilos do Currículo — Versão Web */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #f8fafc;
+    padding: 2rem;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.header-info {
+    flex: 1;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.professional-name {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-info {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.contact-item {
+    margin-bottom: 0.4rem;
+    white-space: nowrap;
+}
+
+.contact-item .label {
+    margin-right: 0.3rem;
+}
+
+.resume-section {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.resume-section:last-of-type {
+    border-bottom: none;
+}
+
+.resume-section h2 {
+    font-size: 1.2rem;
+    color: #2563eb;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #2563eb;
+}
+
+.resume-section p {
+    margin-bottom: 0.5rem;
+}
+
+.education-item,
+.project-item {
+    margin-bottom: 1.5rem;
+}
+
+.education-header,
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.3rem;
+}
+
+.institution,
+.project-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.period {
+    font-size: 0.85rem;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.course {
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.status {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+.project-description {
+    margin-bottom: 0.3rem;
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 0.3rem;
+}
+
+.project-status {
+    font-size: 0.85rem;
+    color: #22c55e;
+    font-weight: 500;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category h3 {
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    font-size: 0.9rem;
+    padding: 0.2rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.skill-category li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+}
+
+.resume-footer {
+    padding: 1rem 2rem;
+    background: #f8fafc;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .resume-header {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    .contact-item {
+        white-space: normal;
+    }
+}

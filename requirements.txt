@@ -1,0 +1,6 @@
+# Dependencias Python para scripts do perfil profissional
+# Instalar com: pip install -r requirements.txt
+
+python-dotenv>=1.0.0
+PyYAML>=6.0
+requests>=2.31.0

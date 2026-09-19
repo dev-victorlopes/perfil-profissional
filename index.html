@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Lopes — Desenvolvedor em Formação</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#hero" class="logo">Victor Lopes</a>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#contato" class="btn-cta">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-label">Desenvolvedor em Formação</p>
+                    <h1 class="hero-title">Victor Lopes</h1>
+                    <p class="hero-subtitle">
+                        Python · Backend · Web · Automação
+                    </p>
+                    <p class="hero-description">
+                        Estudante de ADS na Universidade Estácio e em Programação Python no Senac.
+                        Construo soluções web e sistemas com foco em Django, APIs e automação.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                        <a href="resume/curriculo_victor_lopes.pdf" download class="btn btn-secondary">
+                            Baixar Currículo
+                        </a>
+                        <a href="#contato" class="btn btn-outline">Falar Conosco</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="avatar-placeholder">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="40" fill="#2563eb"/>
+                            <circle cx="40" cy="32" r="18" fill="white" fill-opacity="0.9"/>
+                            <path d="M20 65C20 55.06 28.06 47 40 47C51.94 47 60 55.06 60 65" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <div class="glow glow-1"></div>
+                <div class="glow glow-2"></div>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2 class="section-title">Sobre</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Sou Victor Lopes, um desenvolvedor em formação com foco em Python e 
+                            backend. Atualmente estudo Análise e Desenvolvimento de Sistemas (ADS) 
+                            na Universidade Estácio e Programação Python no Senac Bonsucesso.
+                        </p>
+                        <p>
+                            Minha trajetória é construída através de projetos práticos. Já desenvolvi 
+                            painéis de controle financeiro, sistemas de gestão empresarial e dashboards 
+                            de operação — sempre aprendendo na prática.
+                        </p>
+                        <p>
+                            Tenho interesse em resolver problemas reais através de software, com 
+                            foco em backend, APIs, automação e integração de sistemas.
+                        </p>
+                        <div class="interest-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Backend</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">APIs</span>
+                            <span class="tag">Automação</span>
+                            <span class="tag">Integração</span>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Projetos Reais</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Formações em Andamento</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">Python</div>
+                            <div class="stat-label">Foco Principal</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO -->
+        <section id="formacao" class="section">
+            <div class="container">
+                <h2 class="section-title">Formação</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Análise e Desenvolvimento de Sistemas (ADS)</h3>
+                                <span class="timeline-meta">Universidade Estácio · Aug 2026 — Atual</span>
+                            </div>
+                            <p class="timeline-description">
+                                Graduação em andamento. Curso que forma profissionais para análise, 
+                                desenvolvimento e manutenção de sistemas de informação.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Programação em Python</h3>
+                                <span class="timeline-meta">Senac Bonsucesso · Em andamento</span>
+                            </div>
+                            <p class="timeline-description">
+                                Formação técnica focada em Python. Previsão de conclusão: Outubro 2026.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section id="projetos" class="section">
+            <div class="container">
+                <h2 class="section-title">Projetos</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-header">
+                            <span class="project-status status-functional">Funcional</span>
+                        </div>
+                        <h3>Painel Ômega</h3>
+                        <p class="project-type">Controle de Fluxo Financeiro</p>
+                        <p class="project-description">
+                            Painel web para controle de fluxo financeiro com gestão de clientes, 
+                            saídas, empréstimos, sugestões inteligentes de negociação e relatórios 
+                            CSV/Excel. Inclui PWA e deploy em Vercel.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Django</span>
+                            <span class="tech-badge">Supabase</span>
+                            <span class="tech-badge">PWA</span>
+                            <span class="tech-badge">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-icon" title="Ver código">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.01-3.45 3.37 3.37 0 0 0-6.37-2.42 3.37 3.37 0 0 0-2.42-6.37 3.37 3.37 0 0 0-3.45-.01A3.37 3.37 0 0 0 2.25 4.5 3.37 3.37 0 0 0 3.24 9.56 3.37 3.37 0 0 0 9 19c1.5 5 4.5 7 7 7M12 14l3 3 3-3"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="link-icon" title="Demonstração">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polygon points="10 8 16 12 10 16 10 8"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <span class="project-status status-functional">Funcional</span>
+                        </div>
+                        <h3>Sistema de Gestão Empresarial</h3>
+                        <p class="project-type">MVP para Pequenos Negócios</p>
+                        <p class="project-description">
+                            Sistema web completo para gestão de pequenas empresas: estoque, 
+                            fluxo de caixa, dashboard com gráficos, exportação CSV/PDF e 
+                            tema claro/escuro. Autenticação e isolamento de dados por usuário.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Django 6.1</span>
+                            <span class="tech-badge">Supabase</span>
+                            <span class="tech-badge">ReportLab</span>
+                            <span class="tech-badge">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-icon" title="Ver código">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.01-3.35 3.37 3.37 0 0 0-6.37-2.42 3.37 3.37 0 0 0-2.42-6.37 3.37 3.37 0 0 0-3.45-.01A3.37 3.37 0 0 0 2.25 4.5 3.37 3.37 0 0 0 3.24 9.56 3.37 3.37 0 0 0 9 19c1.5 5 4.5 7 7 7M12 14l3 3 3-3"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="link-icon" title="Demonstração">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polygon points="10 8 16 12 10 16 10 8"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <span class="project-status status-demo">Demo</span>
+                        </div>
+                        <h3>Hermes Agency</h3>
+                        <p class="project-type">Dashboard de Operação</p>
+                        <p class="project-description">
+                            Dashboard para gerenciamento de leads, pipeline, propostas e 
+                            atividades de agência digital. CRUD completo, pipeline visual 
+                            com múltiplas etapas e timeline de atividades.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML/CSS/JS</span>
+                            <span class="tech-badge">Supabase</span>
+                            <span class="tech-badge">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-icon" title="Ver código">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.01-3.35 3.37 3.37 0 0 0-6.37-2.42 3.37 3.37 0 0 0-2.42-6.37 3.37 3.37 0 0 0-3.45-.01A3.37 3.37 0 0 0 2.25 4.5 3.37 3.37 0 0 0 3.24 9.56 3.37 3.37 0 0 0 9 19c1.5 5 4.5 7 7 7M12 14l3 3 3-3"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="link-icon" title="Demonstração">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polygon points="10 8 16 12 10 16 10 8"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECNOLOGIAS -->
+        <section id="tecnologias" class="section">
+            <div class="container">
+                <h2 class="section-title">Tecnologias</h2>
+                <div class="tech-columns">
+                    <div class="tech-column">
+                        <h3>Conhecimentos Atuais</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">Lógica de Programação</span>
+                            <span class="tech-item">HTML</span>
+                            <span class="tech-item">CSS</span>
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">Django</span>
+                            <span class="tech-item">Bancos de Dados</span>
+                            <span class="tech-item">Supabase</span>
+                            <span class="tech-item">Vercel</span>
+                        </div>
+                    </div>
+                    <div class="tech-column">
+                        <h3>Em Aprendizado</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">APIs REST</span>
+                            <span class="tech-item">Integração de Sistemas</span>
+                            <span class="tech-item">Testes Automatizados</span>
+                            <span class="tech-item">Docker (básico)</span>
+                            <span class="tech-item">IA Aplicada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p>Estou aberto a oportunidades de estágio e projetos em desenvolvimento Python, 
+                           backend e tecnologias relacionadas.</p>
+                        <div class="contact-items">
+                            <a href="https://wa.me/5521959223179" class="contact-item" target="_blank" rel="noopener">
+                                <span class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.057 1.03 6.79 2.813a9.825 9.825 0 012.813 6.79c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                </span>
+                                <span class="contact-text">
+                                    <strong>WhatsApp</strong>
+                                    <span>+55 21 95922-3179</span>
+                                </span>
+                            </a>
+                            <a href="mailto:email@ejemplo.com" class="contact-item">
+                                <span class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </span>
+                                <span class="contact-text">
+                                    <strong>E-mail</strong>
+                                    <span>[vic.lopes@...]</span>
+                                </span>
+                            </a>
+                            <a href="#" class="contact-item">
+                                <span class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.521.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </span>
+                                <span class="contact-text">
+                                    <strong>LinkedIn</strong>
+                                    <span>[link]</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <h3>Envie uma Mensagem</h3>
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+                        <p class="form-note">Sua mensagem será respondida em até 48 horas.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Victor Lopes. Todos os direitos reservados.</p>
+            <p class="footer-links">
+                <a href="#hero">Início</a> · 
+                <a href="#sobre">Sobre</a> · 
+                <a href="#projetos">Projetos</a> · 
+                <a href="resume/curriculo_victor_lopes.pdf" download>Currículo</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

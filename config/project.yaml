@@ -1,0 +1,19 @@
+projeto:
+  nome: perfil-profissional
+  owner: Victor Lopes
+  plataforma: desenvolvimento local + Vercel
+
+contas:
+  gmail:
+    email: desenvolvedor.victorlopes@gmail.com
+    state: configurado
+  github:
+    username: dev-victorlopes
+    state: configurado
+  linkedin:
+    email: desenvolvedor.victorlopes@gmail.com
+    state: configurado
+
+nota_seguranca: |
+  Credenciais sensíveis não são armazenadas em arquivos.
+  Para cada sessão, forneça as credenciais sob demanda.

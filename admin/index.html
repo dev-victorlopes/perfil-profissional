@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin — Victor Lopes</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .admin-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .admin-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .admin-card h2 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.7rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: var(--font-sans);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: border-color var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .alert {
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .alert-error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+
+        .alert-success {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        .btn {
+            padding: 0.65rem 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Victor Lopes</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Voltar ao Portfólio</a></li>
+                <li><a href="#" id="logoutBtn" style="display:none;">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-container">
+            <!-- Login -->
+            <div id="loginSection" class="admin-card">
+                <h2>🔐 Acesso Administrador</h2>
+                <div id="loginMessage"></div>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="adminEmail">E-mail</label>
+                        <input type="email" id="adminEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Senha</label>
+                        <input type="password" id="adminPassword" required>
+                    </div>
+                    <div class="btn-row">
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </div>
+                </form>
+                <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">
+                    Acesso restrito. Somente o administrador pode editar o conteúdo.
+                </p>
+            </div>
+
+            <!-- Dashboard (só aparece logado) -->
+            <div id="dashboardSection" style="display:none;">
+                <div class="admin-card">
+                    <h2>⚙️ Editar Conteúdo do Portfólio</h2>
+                    
+                    <div class="alert alert-success" id="successMessage" style="display:none;">
+                        Conteúdo atualizado com sucesso!
+                    </div>
+
+                    <form id="profileForm">
+                        <div class="form-group">
+                            <label for="profileName">Nome Completo</label>
+                            <input type="text" id="profileName" value="Victor Hugo Lopes da Silva">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileProfessional">Nome Profissional</label>
+                            <input type="text" id="profileProfessional" value="Victor Lopes">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileTitle">Título / Cargo</label>
+                            <input type="text" id="profileTitle" value="Desenvolvedor em Formação">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileSubtitle">Subtítulo (Hero)</label>
+                            <input type="text" id="profileSubtitle" value="Python · Backend · Web · Automação">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileDescription">Descrição (Sobre)</label>
+                            <textarea id="profileDescription" rows="4">Sou Victor Lopes, um desenvolvedor em formação com foco em Python e backend. Atualmente estudo Análise e Desenvolvimento de Sistemas (ADS) na Universidade Estácio e Programação Python no Senac Bonsucesso.</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileWhatsapp">WhatsApp</label>
+                            <input type="text" id="profileWhatsapp" value="+55 21 95922-3179">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileEmail">E-mail</label>
+                            <input type="email" id="profileEmail" value="" placeholder="vic.lopes@...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileLinkedin">LinkedIn URL</label>
+                            <input type="url" id="profileLinkedin" value="" placeholder="https://linkedin.com/in/...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileGithub">GitHub URL</label>
+                            <input type="url" id="profileGithub" value="" placeholder="https://github.com/...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="portfolioUrl">URL do Portfólio</label>
+                            <input type="url" id="portfolioUrl" value="" placeholder="https://victorlopes.vercel.app">
+                        </div>
+
+                        <div class="btn-row">
+                            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="reset" class="btn btn-secondary">Resetar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="admin-card">
+                    <h2>ℹ️ Informações</h2>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                        Este painel usa <strong>localStorage</strong> para salvar as alterações localmente.
+                        Para sincronizar com o site publicado, o conteúdo deve ser atualizado no código-fonte
+                        ou em um backend futuro (Supabase).
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 1rem;">
+                        <strong>Nota de segurança:</strong> Nenhum dado sensível (CPF, senhas) deve ser 
+                        inserido neste painel. O CPF é utilizado apenas como identificação interna e nunca 
+                        é exibido no frontend.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Configurações de login (em produção, usar backend)
+        const ADMIN_CREDENTIALS = {
+            email: 'admin@victorlopes.local',
+            password: 'admin2026' // Em produção: usar hash e backend seguro
+        };
+
+        // Estado da sessão
+        let isLoggedIn = false;
+
+        // Elementos DOM
+        const loginSection = document.getElementById('loginSection');
+        const dashboardSection = document.getElementById('dashboardSection');
+        const loginForm = document.getElementById('loginForm');
+        const loginMessage = document.getElementById('loginMessage');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const profileForm = document.getElementById('profileForm');
+        const successMessage = document.getElementById('successMessage');
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', () => {
+            // Verificar se já está logado (sessionStorage)
+            const session = sessionStorage.getItem('adminSession');
+            if (session === 'true') {
+                isLoggedIn = true;
+                showDashboard();
+            }
+
+            // Event Listeners
+            loginForm?.addEventListener('submit', handleLogin);
+            profileForm?.addEventListener('submit', handleProfileUpdate);
+            logoutBtn?.addEventListener('click', handleLogout);
+        });
+
+        // Login
+        function handleLogin(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('adminEmail').value;
+            const password = document.getElementById('adminPassword').value;
+
+            // Verificação (demonstração - em produção usar backend)
+            if (email === ADMIN_CREDENTIALS.email && password === ADMIN_CREDENTIALS.password) {
+                isLoggedIn = true;
+                sessionStorage.setItem('adminSession', 'true');
+                loginMessage.innerHTML = '';
+                showDashboard();
+            } else {
+                loginMessage.innerHTML = '<div class="alert alert-error">E-mail ou senha incorretos.</div>';
+            }
+        }
+
+        // Mostrar dashboard
+        function showDashboard() {
+            loginSection.style.display = 'none';
+            dashboardSection.style.display = 'block';
+            logoutBtn.style.display = 'inline-block';
+            
+            // Carregar dados salvos no localStorage
+            loadSavedData();
+        }
+
+        // Carregar dados do localStorage
+        function loadSavedData() {
+            const saved = localStorage.getItem('portfolioData');
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    document.getElementById('profileName').value = data.name || '';
+                    document.getElementById('profileProfessional').value = data.professional || '';
+                    document.getElementById('profileTitle').value = data.title || '';
+                    document.getElementById('profileSubtitle').value = data.subtitle || '';
+                    document.getElementById('profileDescription').value = data.description || '';
+                    document.getElementById('profileWhatsapp').value = data.whatsapp || '';
+                    document.getElementById('profileEmail').value = data.email || '';
+                    document.getElementById('profileLinkedin').value = data.linkedin || '';
+                    document.getElementById('profileGithub').value = data.github || '';
+                    document.getElementById('portfolioUrl').value = data.portfolio || '';
+                } catch (e) {
+                    console.error('Erro ao carregar dados:', e);
+                }
+            }
+        }
+
+        // Salvar dados no localStorage
+        function saveData(data) {
+            localStorage.setItem('portfolioData', JSON.stringify(data));
+        }
+
+        // Atualizar perfil
+        function handleProfileUpdate(e) {
+            e.preventDefault();
+            
+            const data = {
+                name: document.getElementById('profileName').value,
+                professional: document.getElementById('profileProfessional').value,
+                title: document.getElementById('profileTitle').value,
+                subtitle: document.getElementById('profileSubtitle').value,
+                description: document.getElementById('profileDescription').value,
+                whatsapp: document.getElementById('profileWhatsapp').value,
+                email: document.getElementById('profileEmail').value,
+                linkedin: document.getElementById('profileLinkedin').value,
+                github: document.getElementById('profileGithub').value,
+                portfolio: document.getElementById('portfolioUrl').value,
+                updatedAt: new Date().toISOString()
+            };
+
+            saveData(data);
+            
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        }
+
+        // Logout
+        function handleLogout() {
+            isLoggedIn = false;
+            sessionStorage.removeItem('adminSession');
+            loginSection.style.display = 'block';
+            dashboardSection.style.display = 'none';
+            logoutBtn.style.display = 'none';
+            document.getElementById('adminEmail').value = '';
+            document.getElementById('adminPassword').value = '';
+        }
+    </script>
+</body>
+</html>
